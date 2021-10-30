@@ -1,0 +1,58 @@
+#!/bin/bash
+
+rm -f \
+    20210907_GAfmw81mKLY.info.json.vo.* \
+    20210907_GAfmw81mKLY.info.json.ao.* \
+    20210907_GAfmw81mKLY.info.json.bo.* \
+    20210907_GAfmw81mKLY.info.json.wav 
+
+rm -fr               20210907_GAfmw81mKLY.info_dir
+mkdir -p             20210907_GAfmw81mKLY.info_dir
+mv 20210907_GAfmw81mKLY.info.json 20210907_GAfmw81mKLY.info.json.*         20210907_GAfmw81mKLY.info_dir/
+
+
+
+mv  20210907_GAfmw81mKLY.info_dir/20210907_GAfmw81mKLY.info.json.jpg 20210907_GAfmw81mKLY.info_dir/20210907_GAfmw81mKLY.info.json.mp4.jpg
+
+cat > 20210907_GAfmw81mKLY.info_dir/_index.md << EOF3
++++
+title = " 20210907_GAfmw81mKLY 小龙女的二婚长啥样？ "
+description = " 梅超风跑窝里，错失饕餮盛宴，小老公发飚，小龙女支的招。 "
+weight = 20
++++
+
+{{< mymp4 mp4="20210907_GAfmw81mKLY.info.json.mp4" 
+text="len $(cat 20210907_GAfmw81mKLY.info_dir/20210907_GAfmw81mKLY.info.json.mp4|wc -c)"
+>}}
+
+{{< mymp4x  mp4x="20210907_GAfmw81mKLY.info.json.25k.mp4"
+text="len $(cat 20210907_GAfmw81mKLY.info_dir/20210907_GAfmw81mKLY.info.json.25k.mp4|wc -c)"
+>}}
+
+{{< mymp4x  mp4x="20210907_GAfmw81mKLY.info.json.48k.mp4"
+text="len $(cat 20210907_GAfmw81mKLY.info_dir/20210907_GAfmw81mKLY.info.json.48k.mp4|wc -c)"
+>}}
+
+
+{{< mydiv text="梅超风跑窝里，错失饕餮盛宴，小老公发飚，小龙女支的招。" >}}
+<br>
+
+{{< mydiv link="https://www.youtube.com/watch?v=GAfmw81mKLY" >}}
+
+
+<br>
+
+请大家传播时，不需要传播文件本身，<br>
+原因是：一旦传播过大东西（例如，图片，文件），<br>
+就会触发检查机制。<br>
+我不知道检查机制的触发条件。<br>
+但是我知道，不会说你传一个没有敏感词的网络地址都检查，<br>
+否则，检查员得累死。<br><br>
+直接转发网址就可以了：<br>
+原因是，这是程序员网站，<br>
+共匪不敢封锁，墙内可以直接下载。
+
+
+EOF3
+
+
